@@ -1,467 +1,446 @@
+body {
+  background-image: url("../backg.png");
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 2rem;
 
-
-body{
-    background-image: url("../backg.png");
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    margin: 2rem;
-
-    .number__1{
-        width: 20rem;
-        height: 20rem;
-        background-color: #4D77FF;
-        border-radius: 8px;
-        h3{
-            text-align: center;
-        }
-
-        .box {
-            width: 60px;
-            height: 60px;
-            margin-top: 6rem;
-            margin-left: 8rem;
-            background-color: white;
-        }
-        .up {
-            animation: up 1.6s ease-in-out infinite;
-
-        }
-        .down {
-            animation: down 1.6s ease-in infinite;
-        }
-        
-        .squeeze {
-            animation: squeeze 1.6s ease-in-out infinite;
-        }
-        
-        .rotate {
-            animation: rotate 1.6s linear infinite;
-        }
-        
-        @keyframes rotate {
-            0% {
-                transform: rotate(-135deg);
-            }
-            20%,80% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(135deg);
-            }
-        }
-        
-        @keyframes squeeze {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.8, 0.4);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        
-        @keyframes up {
-            0%, 80% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-100px);
-            }
-        }
-        
-        @keyframes down {
-            0% {
-                transform: translateY(-100px);
-            }
-            20%, 100% {
-                transform: translateY(0);
-            }
-        }
-        
+  .number__1 {
+    width: 20rem;
+    height: 20rem;
+    background-color: #83a0ff;
+    border-radius: 8px;
+    h3 {
+      text-align: center;
     }
 
-    // Animation 2
-
-    .number__2{
-        width: 20rem;
-        height: 20rem;
-        background-color: white;
-        border-radius: 8px;
-        .title{
-            height: 30px;
-            h3{
-            text-align: center;
-        } 
+    .box {
+      width: 60px;
+      height: 60px;
+      margin-top: 6rem;
+      margin-left: 8rem;
+      background-color: #50545f;
     }
-        
-        .container {
-            display: flex;
-            width: 100%;
-            height: 83%;
-            
-            
-            .col {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-grow: 1;
-                cursor: pointer;
-                transition: all 0.5s;
-                font-weight: 700;
-                
-                .text {
-                    display: none;
-                    font-size: 10px;
-                }
-                
-            }
-            .col-1, .col-3 {
-                background-color: #FFB2A6;
-            }
-            .col-2, .col-4 {
-                background-color: #FFE162;
-            }
-            .col-1,
-            .col-2,
-            .col-3,
-            .col-4{
-                
-                &:hover{
-                    flex-grow: 4;
-                }
-                &:hover .text {
-                    display: inline-block;
-                    animation: text-scale .5s ease-in-out forwards;
-                    @keyframes text-scale {
-                        0% {
-                            display: none;
-                            opacity: 0;
-                            transform: scale(1);
-                        }
-                        
-                        100% {
-                            opacity: 1;
-                            transform: scale(2.5);
-                        }
-                        
-                    }
-                }
-            }
-            
-        }
-        
-       
-       
-        
+    .up {
+      animation: up 1.6s ease-in-out infinite;
+    }
+    .down {
+      animation: down 1.6s ease-in infinite;
     }
 
-    // Animation 3
-    .number__3{
-        width: 20rem;
-        height: 20rem;
-        background-color: #EAB0D9;
-        border-radius: 8px;
-
-            h3{
-            text-align: center;
-            color: white;
-        }
-        .line {
-            margin-top: 5rem;
-            fill: none;
-            stroke: #fff;
-            stroke-width: 3px;
-            stroke-linecap: round;
-            animation: line 2.5s linear infinite;
-        }
-        
-        
-        @keyframes line {
-            from {
-                stroke-dasharray: 50 660;
-                stroke-dashoffset: 780;
-            }
-            to {
-                stroke-dasharray: 50 660;
-                stroke-dashoffset: 70;
-            }
-        }
-
-        
+    .squeeze {
+      animation: squeeze 1.6s ease-in-out infinite;
     }
 
-    // Animation 4
+    .rotate {
+      animation: rotate 1.6s linear infinite;
+    }
 
-    .number__4{
-        width: 20rem;
-        height: 20rem;
-        background-color: #F999B7;
-        border-radius: 8px;
-        h3{
-            text-align: center;
-        }
+    @keyframes rotate {
+      0% {
+        transform: rotate(-135deg);
+      }
+      20%,
+      80% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(135deg);
+      }
+    }
 
-        .center{
-            margin-top: 5rem;
-            margin-left: 3rem;
-            .frame {
-            width: 225px;
-            height: 2px;
-            background: #fff;
-            margin: 15px 0;
-            animation: frame .6s ease-out ;
-        }
-        
+    @keyframes squeeze {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.8, 0.4);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes up {
+      0%,
+      80% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100px);
+      }
+    }
+
+    @keyframes down {
+      0% {
+        transform: translateY(-100px);
+      }
+      20%,
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  // Animation 2
+
+  .number__2 {
+    width: 20rem;
+    height: 20rem;
+    background-color: white;
+    border-radius: 8px;
+    .title {
+      height: 30px;
+      h3 {
+        text-align: center;
+      }
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 83%;
+
+      .col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        cursor: pointer;
+        transition: all 0.5s;
+        font-weight: 700;
+
         .text {
-            stroke: white;
-            stroke-dasharray: 270;
-            stroke-dashoffset: 0;
-            
-            .p1 {
-                fill: #fff;
-                stroke-width: 6;
-                animation: fill 1.2s ease-in-out both;
-            }
-            
-            .p2 {
-                fill: #fff;
-                stroke-width: 12;
-                animation: fill 1.7s ease-in-out both;
-            }
-            
-            .p3 {
-                fill: #fff;
-                stroke-width: 18;
-                animation: fill 2.2s ease-in-out both;
-            }
-            
+          display: none;
+          font-size: 10px;
         }
-        
-        @keyframes fill {
-            from {
-                stroke-dashoffset: 0;
-            }
-            to {
-                stroke-dashoffset: 270;
-            }
+      }
+      .col-1,
+      .col-3 {
+        background-color: #592720;
+      }
+      .col-2,
+      .col-4 {
+        background-color: #9d8d48;
+      }
+      .col-1,
+      .col-2,
+      .col-3,
+      .col-4 {
+        &:hover {
+          flex-grow: 8;
         }
-        
-        @keyframes frame {
-            from {
-                transform: scaleX(0);
+        &:hover .text {
+          display: inline-block;
+          animation: text-scale 0.5s ease-in-out forwards;
+          @keyframes text-scale {
+            0% {
+              display: none;
+              opacity: 0;
+              transform: scale(1);
             }
-            to {
-                transform: scaleX(1);
-            }
-        }
-        
-    
-    }
-        }
-        
 
-
-    // Animation 5
-
-    .number__5{
-        width: 20rem;
-        height: 20rem;
-        background-color: white;
-        border-radius: 8px;
-        margin-top: 2rem;
-        h3{
-            text-align: center;
-        }
-        .box {
-            width: 320px;
-            height: 260px;
-            background: #222 url(https://100dayscss.com/codepen/slice-image-1.jpg) center;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            border-radius: 2px;
-            flex-wrap: wrap;
-            cursor: pointer;
-            overflow: hidden;
-          
-            h1,
-            h2 {
-            transition: all .6s ease-in-out;
-            }
-            h1 {
-              font-size: 50px;
-            }
-            h2 {
-              font-size: 40px;
-            }
-            .bg {
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              display: flex;
-              align-items: center;
-          
-              .s {
-                height: 100%;
-                flex: 1;
-                background: url(https://100dayscss.com/codepen/slice-image-2.jpg);
-                background-size: cover;
-                opacity: 0;
-                transition: all 1s ease-in-out;
-              }
-              .s-2 {
-                background-position: 500px;
-              }
-              .s-3 {
-                background-position: 250px;
-              }
-              .s-4 {
-                background-position: 210px;
-              }
-              .s-5 {
-                background-position: 170px;
-              }
-              .s-6 {
-                background-position: 130px;
-              }
-              .s-7 {
-                background-position: 90px;
-              }
-              .s-8 {
-                background-position: 50px;
-              }
-              .s-1,
-              .s-3,
-              .s-5,
-              .s-7 {
-                transform: translateY(50px);
-              }
-              .s-2,
-              .s-4,
-              .s-6,
-              .s-8 {
-                transform: translateY(-50px);
-              }
-            }
-            &:hover {
-              & > .bg > .s {
-                transform: translateY(0);
-                opacity: 1;
-              }
-          
-              h1 {
-                transform: translateX(-30px);
-                      opacity: 0;
-              }
-              h2 {
-                transform: translateX(30px);
-                      opacity: 0;
-              }
+            100% {
+              opacity: 1;
+              transform: scale(2.5);
             }
           }
-          
-    }
-
-    // Animation 6 / JS
-    .number__6{
-        width: 20rem;
-        height: 20rem;
-        margin-top: 2rem;
-        background-color: #9ADCFF;
-        border-radius: 8px;
-        color: #fff;
-
-        h3{
-            text-align: center;
-        }
-        #light_mode{
-            margin: 5rem 0 0 8rem;
-            cursor:pointer;
-        }
-        p{
-            text-align: center;
-        }
-    
-    }
-
-    // Animation 7
-    .number__7{
-        width: 20rem;
-        height: 20rem;
-        margin-top: 2rem;
-        background-color: white;
-        border-radius: 8px;
-        h3{
-            text-align: center;
-        
-    }
-    .cursor{
-        z-index: 1;
-        position: fixed;
-        background: #2696E8;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        pointer-events: none;
-        animation: colors 5s infinite;
-      }
-      
-      @keyframes colors{
-        0%{
-          filter: hue-rotate(0deg);
-        }
-        100%{
-          filter: hue-rotate(360deg);
         }
       }
-      
-      .cursor:before{
-        content: '';
+    }
+  }
+
+  // Animation 3
+  .number__3 {
+    width: 20rem;
+    height: 20rem;
+    background-color: #ccc0c9;
+    border-radius: 8px;
+    overflow: hidden;
+    h3 {
+      text-align: center;
+      color: white;
+    }
+    .line {
+      margin-top: 5rem;
+      fill: none;
+      stroke: red;
+      stroke-width: 3px;
+      stroke-linecap: round;
+      animation: line 1.5s linear infinite;
+    }
+
+    @keyframes line {
+      from {
+        stroke-dasharray: 50 660;
+        stroke-dashoffset: 780;
+      }
+      to {
+        stroke-dasharray: 50 660;
+        stroke-dashoffset: 70;
+      }
+    }
+  }
+
+  // Animation 4
+
+  .number__4 {
+    width: 20rem;
+    height: 20rem;
+    background-color: #9cf999;
+    border-radius: 8px;
+    h3 {
+      text-align: center;
+    }
+
+    .center {
+      margin-top: 5rem;
+      margin-left: 3rem;
+      .frame {
+        width: 225px;
+        height: 2px;
+        background: #fff;
+        margin: 15px 0;
+        animation: frame 0.6s ease-out;
+      }
+
+      .text {
+        stroke: white;
+        stroke-dasharray: 270;
+        stroke-dashoffset: 0;
+
+        .p1 {
+          fill: #fff;
+          stroke-width: 6;
+          animation: fill 1.2s ease-in-out both;
+        }
+
+        .p2 {
+          fill: #fff;
+          stroke-width: 12;
+          animation: fill 1.7s ease-in-out both;
+        }
+
+        .p3 {
+          fill: #fff;
+          stroke-width: 18;
+          animation: fill 2.2s ease-in-out both;
+        }
+      }
+
+      @keyframes fill {
+        from {
+          stroke-dashoffset: 0;
+        }
+        to {
+          stroke-dashoffset: 270;
+        }
+      }
+
+      @keyframes frame {
+        from {
+          transform: scaleX(0);
+        }
+        to {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  // Animation 5
+
+  .number__5 {
+    width: 20rem;
+    height: 20rem;
+    background-color: #ae8ece;
+    border-radius: 8px;
+    margin-top: 2rem;
+    h3 {
+      text-align: center;
+    }
+    .box {
+      width: 320px;
+      height: 260px;
+      background: #222 url(https://100dayscss.com/codepen/slice-image-1.jpg)
+        center;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-radius: 2px;
+      flex-wrap: wrap;
+      cursor: pointer;
+      overflow: hidden;
+
+      h1,
+      h2 {
+        transition: all 0.6s ease-in-out;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      .bg {
+        width: 100%;
+        height: 100%;
         position: absolute;
-        background: #2696E8;
-        width: 50px;
-        height: 50px;
-        opacity: 0.2;
-        transform: translate(-30%, -30%);
-        border-radius: 50%;
+        display: flex;
+        align-items: center;
+
+        .s {
+          height: 100%;
+          flex: 1;
+          background: url(https://100dayscss.com/codepen/slice-image-2.jpg);
+          background-size: cover;
+          opacity: 0;
+          transition: all 1s ease-in-out;
+        }
+        .s-2 {
+          background-position: 500px;
+        }
+        .s-3 {
+          background-position: 250px;
+        }
+        .s-4 {
+          background-position: 210px;
+        }
+        .s-5 {
+          background-position: 170px;
+        }
+        .s-6 {
+          background-position: 130px;
+        }
+        .s-7 {
+          background-position: 90px;
+        }
+        .s-8 {
+          background-position: 50px;
+        }
+        .s-1,
+        .s-3,
+        .s-5,
+        .s-7 {
+          transform: translateY(50px);
+        }
+        .s-2,
+        .s-4,
+        .s-6,
+        .s-8 {
+          transform: translateY(-50px);
+        }
       }
-}
+      &:hover {
+        & > .bg > .s {
+          transform: translateY(0);
+          opacity: 1;
+        }
 
-    // Animation 8
-    .number__8{
-        width: 20rem;
-        height: 20rem;
-        margin-top: 2rem;
-        background-color: #FFADF0;
-        border-radius: 8px;
-        h3{
-            text-align: center;
+        h1 {
+          transform: translateX(-30px);
+          opacity: 0;
         }
-        p{
-            margin-top: 6rem;
-            margin-left: 5rem;
-            font-size: 20px;
-            color: #fff;
+        h2 {
+          transform: translateX(30px);
+          opacity: 0;
         }
-        button{
-            font-size: 15px;
-            margin-left: 5.5rem;
-            margin-top: 5rem;
-            padding: 1rem;
-            border: 2px solid #C1F8CF;
-            border-radius: 10px;
-            background: transparent;
-            color: #FDEBF7;
-            cursor: pointer;
-        }
+      }
     }
- 
-  
-}
+  }
 
-    
+  // Animation 6 / JS
+  .number__6 {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2rem;
+    background-color: #9adcff;
+    border-radius: 8px;
+    color: #fff;
+
+    h3 {
+      text-align: center;
+    }
+    #light_mode {
+      margin: 5rem 0 0 8rem;
+      cursor: pointer;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  // Animation 7
+  .number__7 {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2rem;
+    background-color: rgb(224, 247, 177);
+    border-radius: 8px;
+    h3 {
+      text-align: center;
+    }
+    .cursor {
+      z-index: 1;
+      position: fixed;
+      background: #2696e8;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      animation: colors 5s infinite;
+    }
+
+    @keyframes colors {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .cursor:before {
+      content: "";
+      position: absolute;
+      background: #2696e8;
+      width: 50px;
+      height: 50px;
+      opacity: 0.2;
+      transform: translate(-30%, -30%);
+      border-radius: 50%;
+    }
+  }
+
+  // Animation 8
+  .number__8 {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2rem;
+    background-color: #ffadf0;
+    border-radius: 8px;
+    h3 {
+      text-align: center;
+    }
+    p {
+      margin-top: 6rem;
+      margin-left: 5rem;
+      font-size: 20px;
+      color: #fff;
+    }
+    button {
+      font-size: 15px;
+      margin-left: 5.5rem;
+      margin-top: 5rem;
+      padding: 1rem;
+      border: 2px solid #c1f8cf;
+      border-radius: 10px;
+      background: transparent;
+      color: #fdebf7;
+      cursor: pointer;
+    }
+  }
+}
